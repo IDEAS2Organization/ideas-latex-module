@@ -17,7 +17,7 @@ public class WorkspaceSync {
         Path temp = null;
         Path p = null;
         try {
-            temp = Files.createTempDirectory("LatexTemp");
+            temp = Path.of("/tmp/LatexTemp");
             p = temp.resolve(OUTPUT_FOLDER);
             Files.createDirectories(p);//meterle al directorio temporal la carpeta de resultado
             res = temp.toString();
